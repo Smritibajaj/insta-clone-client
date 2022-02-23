@@ -4,10 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import InstagramLogin from 'react-instagram-login';
+ 
+const responseInstagram = (response) => {
+  console.log(response);
+}
+ 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <InstagramLogin
+    clientId="1628915767495227"
+    scopes={['user_profile,user_media']}
+    redirectUrl={window.location.origin}
+    buttonText="Login"
+    onSuccess={responseInstagram}
+    onFailure={responseInstagram}
+  />,
   document.getElementById('root')
 );
 
