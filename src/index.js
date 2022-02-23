@@ -14,7 +14,7 @@ ReactDOM.render(
   <InstagramLogin
     clientId="1628915767495227"
     scopes={['user_profile,user_media']}
-    redirectUrl={window.location.href}
+    redirectUrl={window.location.origin + "/insta"}
     buttonText="Login"
     onSuccess={responseInstagram}
     onFailure={responseInstagram}
