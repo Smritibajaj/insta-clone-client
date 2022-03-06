@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Route, Outlet, Routes } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const PostComponent = (props) => {
