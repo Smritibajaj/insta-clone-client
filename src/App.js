@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
+import Login from "./AppLogin";
+import Instagram from "./Instagram";
+import Post from "./Post";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const InstagramComponent = () => {
+  return(
+    <Outlet />
+  )
 }
+
+
+const App = () => {
+  return (
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/insta" element={<InstagramComponent />}>
+            <Route index element={<Instagram />} />
+            <Route path=":link" element={<Post />} />
+          </Route>
+          <Route path="/user" element={<InstagramComponent />}>
+            <Route index element={<Instagram />} />
+            <Route path=":link" element={<Post />} />
+          </Route>
+        </Routes>
+      </Router>
+      <Outlet />
+    </>
+  );
+};
 
 export default App;
