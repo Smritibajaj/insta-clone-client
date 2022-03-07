@@ -17,7 +17,7 @@ const Login = () => {
       //axios.defaults.origin = window.location.pathname
 
       axios
-        .post("https://instagram-clone1-app.herokuapp.com/instagram/me", {
+        .post("https://instagram-clone1-app.herokuapp.com/v1/instagram/me", {
           code: response,
           redirectUrl: uri,
         })
