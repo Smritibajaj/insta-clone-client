@@ -40,7 +40,7 @@ const Login = () => {
       <div className="flex justify-center items-center h-screen">
       {!token && !appDataPresent && (
         <InstagramLogin
-          clientId="355608546470738"
+          clientId="7204929049549462"
           scope={"user_profile,user_media"}
           redirectUrl={uri}
           buttonText="Login with instagram"
