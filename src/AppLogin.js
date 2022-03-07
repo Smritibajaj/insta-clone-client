@@ -7,7 +7,7 @@ const Login = () => {
   let navigate = useNavigate();
   const [token, setToken] = useState();
   const appDataPresent = localStorage.getItem('username');
-  const uri = window.location.origin+ '/';
+  const uri = 'https://insta-clone-client.netlify.app/';
   console.log(uri);
   const responseInstagram = (response) => {
     console.log(response);
