@@ -19,7 +19,7 @@ const Login = () => {
       axios
         .post("https://instagram-clone1-app.herokuapp.com/v1/instagram/me", {
           code: response,
-          redirectUrl: uri,
+          redirect_uri: uri,
         })
         .then(({ data }) => {
           console.log("success", data);
